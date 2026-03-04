@@ -1,0 +1,635 @@
+/* ============================================
+   MEDVOCATES RCM - THEME STYLES (FIXED)
+   FIXES: Light mode buttons, icons, shapes, and white content areas
+   ============================================ */
+
+/* ============================================
+   THEME TRANSITIONS
+   ============================================ */
+
+html,
+body,
+[data-theme] {
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* ============================================
+   DARK MODE (DEFAULT)
+   ============================================ */
+
+[data-theme="dark"] {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* ============================================
+   LIGHT MODE - CSS VARIABLES
+   ============================================ */
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f0;
+  --bg-tertiary: #e9ecef;
+  --charcoal: #1a1a1a;
+  --charcoal-light: #f0f0f0;
+  --charcoal-dark: #0a0a0a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6c757d;
+  --color-gold: #2d8685; 
+  --accent-primary: #2d8685; 
+  --border-color: #dee2e6;
+  --grey: #dee2e6;
+  --shadow-luxury: 0 4px 12px rgba(45, 134, 133, 0.15);
+  --shadow-luxury-hover: 0 12px 32px rgba(45, 134, 133, 0.2);
+  --shadow-gold-glow: 0 0 20px rgba(45, 134, 133, 0.4);
+  --shadow-gold-focus: 0 0 0 3px rgba(45, 134, 133, 0.1);
+  --color-success: #2d8685;
+  --color-alert: #c01530;
+}
+
+/* ============================================
+   LIGHT MODE - BODY & BACKGROUNDS
+   ============================================ */
+
+[data-theme="light"] body {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] .bg-bg-primary {
+  background: #ffffff !important;
+}
+
+[data-theme="light"] .bg-bg-secondary {
+  background: #f8f9fa !important;
+}
+
+[data-theme="light"] .bg-bg-card {
+  background: #ffffff !important;
+}
+
+/* ============================================
+   LIGHT MODE - CARDS
+   ============================================ */
+
+[data-theme="light"] .card,
+[data-theme="light"] [class*="card"] {
+  background: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .card:hover {
+  border-color: #2d8685 !important;
+  box-shadow: 0 4px 12px rgba(45, 134, 133, 0.15) !important;
+}
+
+/* ============================================
+   LIGHT MODE - TYPOGRAPHY
+   ============================================ */
+
+[data-theme="light"] {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h6 {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] h5 {
+  color: #2d8685 !important;
+}
+
+[data-theme="light"] p {
+  color: #4a4a4a;
+}
+
+[data-theme="light"] .text-text-primary {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] .text-text-secondary {
+  color: #4a4a4a !important;
+}
+
+[data-theme="light"] .text-text-muted {
+  color: #6c757d !important;
+}
+
+/* ============================================
+   LIGHT MODE - BUTTONS (FIXED)
+   ============================================ */
+
+/* Primary Button - Teal background, White text */
+[data-theme="light"] button[class*="primary"],
+[data-theme="light"] .btn-primary,
+[data-theme="light"] button.btn-primary {
+  background-color: #2d8685 !important;
+  color: #ffffff !important;
+  border: 2px solid #2d8685 !important;
+}
+
+[data-theme="light"] button[class*="primary"]:hover,
+[data-theme="light"] .btn-primary:hover {
+  background-color: #236665 !important;
+  color: #ffffff !important;
+  border-color: #236665 !important;
+  box-shadow: 0 4px 12px rgba(45, 134, 133, 0.3) !important;
+}
+
+/* Secondary Button - Outlined teal */
+[data-theme="light"] button[class*="secondary"],
+[data-theme="light"] .btn-secondary {
+  background-color: transparent !important;
+  color: #2d8685 !important;
+  border: 2px solid #2d8685 !important;
+}
+
+[data-theme="light"] button[class*="secondary"]:hover,
+[data-theme="light"] .btn-secondary:hover {
+  background-color: #2d8685 !important;
+  color: #ffffff !important;
+  border-color: #2d8685 !important;
+}
+
+/* Ghost Button */
+[data-theme="light"] button[class*="ghost"],
+[data-theme="light"] .btn-ghost {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  border: none !important;
+}
+
+[data-theme="light"] button[class*="ghost"]:hover,
+[data-theme="light"] .btn-ghost:hover {
+  background: #f8f9fa !important;
+  color: #2d8685 !important;
+}
+
+/* Text Button */
+[data-theme="light"] .btn-text {
+  background: none !important;
+  color: #2d8685 !important;
+  border: none !important;
+  border-bottom: 1px solid #2d8685 !important;
+}
+
+/* ============================================
+   LIGHT MODE - ICONS & SHAPES (FIXED)
+   ============================================ */
+
+/* All gold icons → teal */
+[data-theme="light"] .text-gold,
+[data-theme="light"] [class*="text-gold"],
+[data-theme="light"] svg.text-gold,
+[data-theme="light"] .text-gold svg {
+  color: #2d8685 !important;
+}
+
+[data-theme="light"] .hover\\:text-gold:hover {
+  color: #2d8685 !important;
+}
+
+/* Icon containers with gold backgrounds */
+[data-theme="light"] .bg-gold\/10,
+[data-theme="light"] [class*="bg-gold/10"],
+[data-theme="light"] .bg-gold\/20,
+[data-theme="light"] [class*="bg-gold/20"] {
+  background-color: rgba(45, 134, 133, 0.1) !important;
+}
+
+/* Borders */
+[data-theme="light"] .border-gold,
+[data-theme="light"] .border-gold\/30,
+[data-theme="light"] [class*="border-gold"] {
+  border-color: rgba(45, 134, 133, 0.3) !important;
+}
+
+/* Success/Checkmark icons */
+[data-theme="light"] .text-success,
+[data-theme="light"] [class*="text-success"] {
+  color: #2d8685 !important;
+}
+
+/* Exception: Keep star ratings GOLD */
+[data-theme="light"] [class*="star"],
+[data-theme="light"] .rating svg,
+[data-theme="light"] [data-rating] svg {
+  color: #c9a961 !important;
+}
+
+/* ============================================
+   LIGHT MODE - CIRCULAR/ROUNDED SHAPES (FIXED)
+   ============================================ */
+
+/* Number badges (process steps, etc.) - Keep GOLD */
+[data-theme="light"] [class*="rounded-full"].bg-gold,
+[data-theme="light"] [class*="rounded-full"][class*="bg-gold"],
+[data-theme="light"] .bg-gold.rounded-full {
+  background-color: #c9a961 !important;
+  color: #1a1a1a !important;
+  border-color: #c9a961 !important;
+}
+
+/* Icon circles - Use TEAL */
+[data-theme="light"] [class*="rounded-full"].bg-gold\/10,
+[data-theme="light"] [class*="rounded-full"][class*="bg-gold/10"] {
+  background-color: rgba(45, 134, 133, 0.1) !important;
+}
+
+[data-theme="light"] [class*="rounded-full"].border-gold,
+[data-theme="light"] [class*="rounded-full"][class*="border-gold"] {
+  border-color: rgba(45, 134, 133, 0.3) !important;
+}
+
+/* ============================================
+   LIGHT MODE - BADGES (FIXED)
+   ============================================ */
+
+[data-theme="light"] .badge,
+[data-theme="light"] [class*="badge"] {
+  background-color: rgba(45, 134, 133, 0.1) !important;
+  color: #2d8685 !important;
+  border: 1px solid rgba(45, 134, 133, 0.3) !important;
+}
+
+/* ============================================
+   LIGHT MODE - HERO & GRADIENTS
+   ============================================ */
+
+/* Dark gradient sections (Hero, Stats, etc.) - Teal gradient */
+[data-theme="light"] .bg-gradient-dark,
+[data-theme="light"] section.bg-gradient-dark {
+  background: linear-gradient(135deg, #2d8685 0%, #1a5f5e 100%) !important;
+}
+
+/* ✅ FIX: ALL text on teal/dark backgrounds = WHITE */
+[data-theme="light"] .bg-gradient-dark *,
+[data-theme="light"] .bg-gradient-dark h1,
+[data-theme="light"] .bg-gradient-dark h2,
+[data-theme="light"] .bg-gradient-dark h3,
+[data-theme="light"] .bg-gradient-dark h4,
+[data-theme="light"] .bg-gradient-dark h5,
+[data-theme="light"] .bg-gradient-dark h6,
+[data-theme="light"] .bg-gradient-dark p,
+[data-theme="light"] .bg-gradient-dark span,
+[data-theme="light"] .bg-gradient-dark div,
+[data-theme="light"] .bg-gradient-dark a,
+[data-theme="light"] .bg-gradient-dark li,
+[data-theme="light"] .bg-gradient-dark strong {
+  color: #ffffff !important;
+}
+
+/* ✅ FIX: Hero section with image background — force white text */
+[data-theme="light"] section[style*="background"],
+[data-theme="light"] .hero-section,
+[data-theme="light"] .hero-section *,
+[data-theme="light"] section.relative.hero *:not(.text-gold) {
+  color: #ffffff !important;
+}
+
+/* Keep gold color where explicitly set */
+[data-theme="light"] .bg-gradient-dark .text-gold {
+  color: #c9a961 !important;
+}
+
+/* Gold gradient sections (CTA cards) */
+[data-theme="light"] .bg-gradient-gold {
+  background: linear-gradient(135deg, #c9a961 0%, #d4b574 100%) !important;
+}
+
+/* Text on gold = BLACK */
+[data-theme="light"] .bg-gradient-gold *,
+[data-theme="light"] .bg-gradient-gold h1,
+[data-theme="light"] .bg-gradient-gold h2,
+[data-theme="light"] .bg-gradient-gold h3,
+[data-theme="light"] .bg-gradient-gold h4,
+[data-theme="light"] .bg-gradient-gold h5,
+[data-theme="light"] .bg-gradient-gold h6,
+[data-theme="light"] .bg-gradient-gold p,
+[data-theme="light"] .bg-gradient-gold span,
+[data-theme="light"] .bg-gradient-gold div {
+  color: #1a1a1a !important;
+}
+
+/* ============================================
+   LIGHT MODE - NAVBAR (FIXED)
+   ============================================ */
+
+[data-theme="light"] nav,
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  backdrop-filter: blur(10px);
+}
+
+/* ✅ LIGHT MODE - Transparent navbar on hero sections */
+[data-theme="light"] nav.on-hero,
+[data-theme="light"] nav:not(.scrolled) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="light"] nav a,
+[data-theme="light"] nav button:not([class*="btn"]):not([class*="primary"]):not([class*="secondary"]) {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] nav a:hover,
+[data-theme="light"] nav button:not([class*="btn"]):hover {
+  color: #2d8685 !important;
+}
+
+[data-theme="light"] nav a.text-gold,
+[data-theme="light"] nav .text-gold {
+  color: #2d8685 !important;
+}
+
+/* Navbar Dropdowns - White background, teal text only */
+[data-theme="light"] nav [data-dropdown],
+[data-theme="light"] nav .absolute {
+  background: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] nav [data-dropdown] a {
+  color: #1a1a1a !important; /* Black text by default */
+  background: transparent !important;
+}
+
+/* ✅ FIXED: Light Mode Hover - Only change text to teal, NO background */
+[data-theme="light"] nav [data-dropdown] a:hover,
+[data-theme="light"] nav [data-dropdown] button:hover {
+  background: transparent !important; /* NO background */
+  color: #2d8685 !important; /* Only teal text */
+}
+
+/* ============================================
+   DARK MODE - NAVBAR DROPDOWNS (FIXED)
+   ============================================ */
+
+/* ✅ FIXED: Dark Mode - Solid background dropdowns, not transparent */
+nav [data-dropdown],
+nav .absolute,
+[data-theme="dark"] nav [data-dropdown],
+[data-theme="dark"] nav .absolute {
+  background: #2a2a2a !important; /* Solid dark background */
+  border: 1px solid #3a3a3a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark Mode Dropdown Links */
+nav [data-dropdown] a,
+nav [data-dropdown] button,
+[data-theme="dark"] nav [data-dropdown] a,
+[data-theme="dark"] nav [data-dropdown] button {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* ✅ FIXED: Dark Mode Hover - Solid gold tinted background */
+nav [data-dropdown] a:hover,
+nav [data-dropdown] button:hover,
+[data-theme="dark"] nav [data-dropdown] a:hover,
+[data-theme="dark"] nav [data-dropdown] button:hover {
+  background: rgba(201, 169, 97, 0.15) !important; /* Subtle gold background */
+  color: #c9a961 !important; /* Gold text */
+}
+
+/* Ensure dropdown descriptions stay visible */
+nav [data-dropdown] .text-text-secondary,
+[data-theme="dark"] nav [data-dropdown] .text-text-secondary {
+  color: #a0a0a0 !important;
+}
+
+nav [data-dropdown] a:hover .text-text-secondary,
+[data-theme="dark"] nav [data-dropdown] a:hover .text-text-secondary {
+  color: #d4b574 !important; /* Lighter gold for descriptions on hover */
+}
+
+/* ============================================
+   LIGHT MODE - MOBILE MENU (FIXED)
+   ============================================ */
+
+[data-theme="light"] .fixed.right-0 {
+  background: #ffffff !important;
+  border-left: 1px solid #dee2e6 !important;
+}
+
+/* ============================================
+   LIGHT MODE - FOOTER
+   ============================================ */
+
+[data-theme="light"] footer,
+[data-theme="light"] .footer {
+  background: #f8f9fa !important;
+  border-top: 1px solid #dee2e6 !important;
+}
+
+[data-theme="light"] footer a {
+  color: #4a4a4a;
+}
+
+[data-theme="light"] footer a:hover {
+  color: #2d8685;
+}
+
+/* ============================================
+   LIGHT MODE - FORMS (FIXED)
+   ============================================ */
+
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #6c757d !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: #2d8685 !important;
+  box-shadow: 0 0 0 3px rgba(45, 134, 133, 0.1) !important;
+  outline: none !important;
+}
+
+/* ============================================
+   LIGHT MODE - LINKS
+   ============================================ */
+
+[data-theme="light"] a {
+  color: #2d8685;
+}
+
+[data-theme="light"] a:hover {
+  color: #236665;
+}
+
+/* ============================================
+   LIGHT MODE - DIVIDERS
+   ============================================ */
+
+[data-theme="light"] .divider,
+[data-theme="light"] hr,
+[data-theme="light"] .border-grey {
+  border-color: #dee2e6 !important;
+}
+
+[data-theme="light"] .divider-gold {
+  background: #2d8685 !important;
+}
+
+/* ============================================
+   LIGHT MODE - SHADOWS (FIXED)
+   ============================================ */
+
+[data-theme="light"] .shadow-luxury {
+  box-shadow: 0 4px 12px rgba(45, 134, 133, 0.15) !important;
+}
+
+[data-theme="light"] .shadow-luxury-hover {
+  box-shadow: 0 12px 32px rgba(45, 134, 133, 0.2) !important;
+}
+
+[data-theme="light"] .shadow-gold,
+[data-theme="light"] .shadow-gold-glow,
+[data-theme="light"] [class*="shadow-gold"] {
+  box-shadow: 0 0 20px rgba(45, 134, 133, 0.4) !important;
+}
+
+/* ============================================
+   LIGHT MODE - ALERT STATES
+   ============================================ */
+
+[data-theme="light"] .border-success\/30 {
+  border-color: rgba(45, 134, 133, 0.3) !important;
+}
+
+[data-theme="light"] .border-alert\/30 {
+  border-color: rgba(192, 21, 48, 0.3) !important;
+}
+
+[data-theme="light"] .text-alert {
+  color: #c01530 !important;
+}
+
+/* ============================================
+   DARK MODE DEFAULT STYLES
+   ============================================ */
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--charcoal);
+  padding: 16px 32px;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition-luxury);
+  border: 2px solid var(--accent-primary);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold-light);
+  box-shadow: var(--shadow-gold-glow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 16px 32px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition-luxury);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* ============================================
+   Z-INDEX HIERARCHY (CRITICAL)
+   ============================================ */
+
+nav {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+nav [data-dropdown],
+nav .absolute {
+  z-index: 99999 !important;
+  position: absolute !important;
+}
+
+.fixed.right-0 {
+  z-index: 99999 !important;
+}
+
+section {
+  position: relative;
+  z-index: auto;
+}
+
+/* ✅ ADMIN PAGES FIX - Content stays below navbar */
+.admin-page,
+.admin-page section,
+.admin-page .container,
+[class*="admin"] {
+  position: relative;
+  z-index: 1 !important;
+}
+
+.admin-page nav {
+  z-index: 9999 !important;
+}
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
+
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: var(--transition-luxury);
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-primary);
+  border-radius: 50%;
+  transition: var(--transition-luxury);
+}
+
+[data-theme="dark"] .theme-toggle::after {
+  transform: translateX(24px);
+}

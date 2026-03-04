@@ -1,0 +1,34 @@
+/* ============================================
+   ScrollVelocity Component Styles
+   Infinite Scroll Animation Component
+   ============================================ */
+
+.scroll-velocity-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-velocity-content {
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+}
+
+.scroll-velocity-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-right: 2rem;
+}
+
+/* Ensure smooth rendering */
+.scroll-velocity-container * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Pause on hover */
+.scroll-velocity-container:hover .scroll-velocity-content {
+  animation-play-state: paused;
+}

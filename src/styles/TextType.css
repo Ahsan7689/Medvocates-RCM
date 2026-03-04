@@ -1,0 +1,35 @@
+/* ============================================
+   TextType Component Styles
+   Typewriter Animation Component
+   ============================================ */
+
+.typewriter-text {
+  display: inline-block;
+  font-family: var(--font-serif);
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--accent-primary);
+  margin-left: 2px;
+  animation: blink-cursor 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Optional: Remove cursor blinking when complete */
+.typewriter-text.complete .typewriter-cursor {
+  animation: none;
+  opacity: 1;
+}
+
+/* Light Mode */
+[data-theme="light"] .typewriter-cursor {
+  background-color: #2d8685;
+}
